@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Tydz4_cw2_FizzBuzz
+﻿namespace Tydz4_cw2_FizzBuzz
 {
     public class FizzBuzz
     {
@@ -34,25 +27,15 @@ namespace Tydz4_cw2_FizzBuzz
         public void FizzBuzzMessage(int number)
         {
             if (number % 3 == 0 && number % 5 == 0)
-            {
                 Console.WriteLine("Sukces! Twój wynik to 'FizzBuzz'\nJeśli chcesz grac dalej wprowadź nową liczbę.");
-                GetNumber();
-            }
             else  if (number % 3 == 0)
-            {
                 Console.WriteLine("Twój wynik to 'Fizz'\nJeśli chcesz grac dalej wprowadź nową liczbę.");
-                GetNumber();
-            }
             else if (number % 5 == 0)
-            {
                 Console.WriteLine("Twój wynik to 'Buzz'\nJeśli chcesz grac dalej wprowadź nową liczbę.");
-                GetNumber();
-            }
             else
-            {
                 Console.WriteLine($"Wprowadzona przez Ciebie liczba {number} nie spełnia logiki FizzBuzz. Jeśli chcesz grac dalej wprowadź nową liczbę.");
-                GetNumber();
-            }
+                
+            GetNumber();
         }
     }
 }
