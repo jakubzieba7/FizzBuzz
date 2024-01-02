@@ -8,22 +8,30 @@
 
             var input = Console.ReadLine();
 
-            while (true)
-            {
-                if (input.ToUpper() == "T")
-                {
-                    Environment.Exit(0);
-                }
-                if (!int.TryParse(input, out int number))
-                {
-                    Console.WriteLine("Wprowadzona liczba nie jest liczbą całkowitą lub wykracza poza jej zakres. Podaj nową liczbę całkowitą:");
-                    input = Console.ReadLine();
-                    continue;
-                }
+            //while (true)
+            //{
+            //    if (input.ToUpper() == "T")
+            //    {
+            //        Environment.Exit(0);
+            //    }
+            //    if (!int.TryParse(input, out int number))
+            //    {
+            //        Console.WriteLine("Wprowadzona liczba nie jest liczbą całkowitą lub wykracza poza jej zakres. Podaj nową liczbę całkowitą:");
+            //        input = Console.ReadLine();
+            //        continue;
+            //    }
 
-                input = FizzBuzz.Message(number);
-            }
+            //    input = FizzBuzz.Message(number);
+                
+            //}
 
+            if (input.ToUpper() == "T")
+                Environment.Exit(0);
+            
+            if (!int.TryParse(input, out int number))
+                Console.WriteLine("Wprowadzona liczba nie jest liczbą całkowitą lub wykracza poza jej zakres.");
+
+            FizzBuzz.GetOutput(number);
         }
     }
 }
